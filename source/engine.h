@@ -1,14 +1,74 @@
 #ifndef ENGINE_H
 # define ENGINE_H
 
-#include <raylib.h>
-#include <raymath.h>
-#include <rlgl.h>
-#include <math.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include "C:/Users/emilia/Desktop/fat_std/include/fatstd.h"
+# ifdef _WIN64
+#  include <C:/mingw64/include/raylib.h>
+#  include <C:/mingw64/include/raymath.h>
+#  include <C:/mingw64/include/rlgl.h>
+# else
+#  include <raylib.h>
+#  include <raymath.h>
+#  include <rlgl.h>
+# endif
+
+# include <time.h>
+# include <stdint.h>
+# include <stddef.h>
+# include <stdbool.h>
+# include <math.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <string.h>
+# include <assert.h>
+
+typedef unsigned int uint32;
+typedef short i16;
+typedef unsigned short u16;
+typedef float f32;
+typedef int	i32;
+typedef unsigned int u32;
+typedef double f64;
+typedef long long i64;
+typedef unsigned long long u64;
+typedef void *ptr;
+
+static inline
+char	*flstrdup(const char *str) {
+	int len = strlen(str);
+	char *newptr = NULL;
+
+	newptr = (char *)malloc(len + 1);
+	assert(newptr);
+	for(int i = 0; i < len; i++) {
+		newptr[i] = str[i];
+	}
+	newptr[len] = 0x00;
+	return (newptr);
+}
+
+/*
+	up to 32 flag
+*/
+enum itemProperties {
+	PLACABLE = 1 << 0,
+	BREAKABLE = 1 << 1,
+	TRANSPARENT = 1 << 2,
+	LOOTABLE = 1 << 3,
+};
+
+/*
+	Item structure 
+	int		id
+	int		texture index
+	char	*name
+	int		properties
+*/
+typedef struct s_Item {
+	int 	id;
+	int 	texture;
+	char	*name;
+	int		properties;
+}	Item;
 
 enum stats {
 	menu = 0,
@@ -42,22 +102,20 @@ typedef struct s_TextDelay {
 } TextDelay;
 
 #define N_BUTTON_STARTUI	3
-#define N_BUTTON_SETTINGUI	5
+#define N_BUTTON_SETTINGUI	4
 #define STAGE_SIZE			120
 #define N_TEXTURE			3
 #define MAX_FADE_TEXT		5
 
-typedef struct s_Context	Ctx;
-typedef struct s_Player		Player;
-typedef struct s_Stage		Stage;
-typedef struct s_Button		Button;
-typedef struct s_Attribut	Attribut;
-typedef struct s_Map		Map;
-
-typedef struct s_Vector {
-	void	*array;
-	int		size;
-}	Vector;
+typedef struct s_Context		Ctx;
+typedef struct s_Player			Player;
+typedef struct s_Stage			Stage;
+typedef struct s_Button			Button;
+typedef struct s_Attribut		Attribut;
+typedef struct s_Map			Map;
+typedef struct s_EntityTemplate	EntityTemplate;
+typedef struct s_Entity			Entity;
+typedef struct s_LootTable		LootTable;
 
 struct s_Attribut {
 	int		max_life;
@@ -108,6 +166,34 @@ struct s_Player {
 	int			last_damage_taken;
 };
 
+struct s_LootTable {
+	u32	size;
+	u32	*item_id;
+	f32	*drop_rate;
+};
+
+struct s_EntityTemplate {
+	float		speed;
+	int			damage;
+	int			life;
+	int			armor;
+	LootTable	loot;
+};
+
+struct s_Entity {
+	char			*name;
+	Vector2			pos;
+	Texture2D		text;
+	Vector2			toPos;
+	float			speed;
+	int				damage;
+	int				life;
+	int				armor;
+	LootTable		loot;
+	u32				id;
+	Entity			*next;
+};
+
 struct s_Context {
 	int			w;
 	int			h;
@@ -119,6 +205,7 @@ struct s_Context {
 	Map			map;
 	double		delta_time;
 	TextDelay	*fadetxt;
+	Button		*settingbutton;
 };
 
 

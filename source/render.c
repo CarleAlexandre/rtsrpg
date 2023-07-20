@@ -25,7 +25,7 @@ TextDelay *createFadingText(const char* text, double delay, Color color, int fon
     
 	ft = malloc(sizeof(TextDelay));
 	assert(ft);
-	ft->fmt = _strdup(text);
+	ft->fmt = flstrdup(text);
 	assert(ft->fmt);
 	ft->delay = delay;
 	ft->alpha = 1.0f;

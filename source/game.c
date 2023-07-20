@@ -19,7 +19,7 @@ int UpdatePlayer(Ctx *ctx) {
 			ctx->fadetxt[healingtxt].delay = 0.2f;
 			ctx->fadetxt[healingtxt].alpha = 0.8f;
 			ctx->fadetxt[healingtxt].color = GREEN;
-			ctx->fadetxt[healingtxt].fmt = _strdup(TextFormat("%.2f", ctx->player.attribut.life_regen));
+			ctx->fadetxt[healingtxt].fmt = flstrdup(TextFormat("%.2f", ctx->player.attribut.life_regen));
 			ctx->fadetxt[healingtxt].font_size = 12;
 			ctx->fadetxt[healingtxt].time = 0;
 		}
@@ -29,6 +29,10 @@ int UpdatePlayer(Ctx *ctx) {
 		ctx->fadetxt[i].pos = (Vector2){ctx->player.pos.x - 48, ctx->player.pos.y - 48};
 	}
 	acc_time += ctx->delta_time;
+	return (0);
+}
+
+int updateEntity(Ctx *ctx) {
 	return (0);
 }
 

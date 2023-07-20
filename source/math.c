@@ -42,8 +42,8 @@ while they worked for Ardent Computing in the late 1980s."
 I love Id
 */
 float	Q_rsqrt( float number) {
-	long		i;
-	float		x2, y;
+	long		i = 0;
+	float		x2 = 0, y = 0;
 	const float	threehalfs = 1.5F;
 
 	x2 = number * 0.5F;

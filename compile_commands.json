@@ -1,0 +1,192 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-std=c99",
+      "-Iinclude",
+	  "-I C:/mingw64/include",
+      "-c",
+      "-o",
+      "source/math.o",
+      "source/math.c"
+    ],
+    "directory": "/home/emilia/usb/rts_rpg",
+    "file": "/home/emilia/usb/rts_rpg/source/math.c",
+    "output": "/home/emilia/usb/rts_rpg/source/math.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-std=c99",
+      "-Iinclude",
+	  "-I C:/mingw64/include",
+      "-c",
+      "-o",
+      "source/engine.o",
+      "source/engine.c"
+    ],
+    "directory": "/home/emilia/usb/rts_rpg",
+    "file": "/home/emilia/usb/rts_rpg/source/engine.c",
+    "output": "/home/emilia/usb/rts_rpg/source/engine.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-std=c99",
+      "-Iinclude",
+	  "-I C:/mingw64/include",
+      "-c",
+      "-o",
+      "source/asset.o",
+      "source/asset.c"
+    ],
+    "directory": "/home/emilia/usb/rts_rpg",
+    "file": "/home/emilia/usb/rts_rpg/source/asset.c",
+    "output": "/home/emilia/usb/rts_rpg/source/asset.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-std=c99",
+      "-Iinclude",
+	  "-I C:/mingw64/include",
+      "-c",
+      "-o",
+      "source/game.o",
+      "source/game.c"
+    ],
+    "directory": "/home/emilia/usb/rts_rpg",
+    "file": "/home/emilia/usb/rts_rpg/source/game.c",
+    "output": "/home/emilia/usb/rts_rpg/source/game.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-std=c99",
+      "-Iinclude",
+	  "-I C:/mingw64/include",
+      "-c",
+      "-o",
+      "source/logic.o",
+      "source/logic.c"
+    ],
+    "directory": "/home/emilia/usb/rts_rpg",
+    "file": "/home/emilia/usb/rts_rpg/source/logic.c",
+    "output": "/home/emilia/usb/rts_rpg/source/logic.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-std=c99",
+      "-Iinclude",
+	  "-I C:/mingw64/include",
+      "-c",
+      "-o",
+      "source/menu.o",
+      "source/menu.c"
+    ],
+    "directory": "/home/emilia/usb/rts_rpg",
+    "file": "/home/emilia/usb/rts_rpg/source/menu.c",
+    "output": "/home/emilia/usb/rts_rpg/source/menu.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-std=c99",
+      "-Iinclude",
+	  "-I C:/mingw64/include",
+      "-c",
+      "-o",
+      "source/render.o",
+      "source/render.c"
+    ],
+    "directory": "/home/emilia/usb/rts_rpg",
+    "file": "/home/emilia/usb/rts_rpg/source/render.c",
+    "output": "/home/emilia/usb/rts_rpg/source/render.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-std=c99",
+      "-Iinclude",
+	  "-I C:/mingw64/include",
+      "-c",
+      "-o",
+      "source/setting.o",
+      "source/setting.c"
+    ],
+    "directory": "/home/emilia/usb/rts_rpg",
+    "file": "/home/emilia/usb/rts_rpg/source/setting.c",
+    "output": "/home/emilia/usb/rts_rpg/source/setting.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-std=c99",
+      "-Iinclude",
+	  "-I C:/mingw64/include",
+      "-c",
+      "-o",
+      "source/loot.o",
+      "source/loot.c"
+    ],
+    "directory": "/home/emilia/usb/rts_rpg",
+    "file": "/home/emilia/usb/rts_rpg/source/setting.c",
+    "output": "/home/emilia/usb/rts_rpg/source/setting.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-std=c99",
+      "-Iinclude",
+	  "-I C:/mingw64/include",
+      "-c",
+      "-o",
+      "source/entity.o",
+      "source/entity.c"
+    ],
+    "directory": "/home/emilia/usb/rts_rpg",
+    "file": "/home/emilia/usb/rts_rpg/source/setting.c",
+    "output": "/home/emilia/usb/rts_rpg/source/setting.o"
+  }
+]
